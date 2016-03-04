@@ -3,6 +3,7 @@ var gutil = require('gulp-util');
 var os = require('os');
 var chalk = require('chalk');
 var del = require('del');
+var nodemon = require('gulp-nodemon');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
@@ -18,8 +19,14 @@ gulp.task('usage', function() {
         chalk.green('usage'),
         '\tdisplay this help page.',
         '',
+        chalk.green('start'),
+        '\truns ' + chalk.green('build') + ' and starts the server on port 8080.',
+        '',
+        chalk.green('serve'),
+        '\tserves up the dist folder, useful when run with ' + chalk.green('watch') + '.',
+        '',
         chalk.green('build'),
-        '\tbuild all the .jsx files into ' + chalk.cyan('dist/bundle.js'),
+        '\tbuild all the .jsx files into ' + chalk.cyan('dist/bundle.js') + '.',
         '',
         chalk.green('watch'),
         '\twatch for changes and run the ' + chalk.green('build') + ' task on changes.',
@@ -40,6 +47,26 @@ gulp.task('usage', function() {
         ''
     ];
     gutil.log(usageLines.join(os.EOL));
+});
+
+gulp.task('start', ['build'], function() {
+    "use strict";
+
+    nodemon({
+        script: 'server/server.js',
+        watch: 'server/server.js',
+        env: { 'NODE_ENV': 'development' }
+    });
+});
+
+gulp.task('serve', function() {
+    "use strict";
+
+    nodemon({
+        script: 'server/server.js',
+        watch: 'server/server.js',
+        env: { 'NODE_ENV': 'development' }
+    });
 });
 
 gulp.task('build', ['copyfiles', 'buildjsx']);
@@ -64,7 +91,7 @@ gulp.task('buildjsx', function() {
     "use strict";
 
     return browserify({
-        entries: 'src/app.jsx',
+        entries: 'src/bootstrap.jsx',
         extensions: ['.jsx'],
         debug: true
     })
