@@ -13,4 +13,11 @@ If not in active development, `gulp start` will build the project and start the 
 
 ## Cleaning
 
-Running a `gulp clean:dist` will remove the `dist/` folder. `gulp clean` is an alias for `gulp clean:dist`. The `node_modules` folder can be cleaned up using `gulp clean:modules` and both the build folder and the node modules folder can be cleaned up using `gulp clean:all`. 
+Running a `gulp clean:dist` will remove the `dist/` folder. `gulp clean` is an alias for `gulp clean:dist`. The `node_modules` folder can be cleaned up using `gulp clean:modules` and both the build folder and the node modules folder can be cleaned up using `gulp clean:all`.
+
+## Useful links
+* [React Docs](https://facebook.github.io/react/docs/getting-started.html)
+* [Material UI Docs](http://www.material-ui.com/#/)
+* [ES2015 syntax](https://babeljs.io/docs/learn-es2015/)
+* [browserify Docs](https://github.com/substack/node-browserify#usage)
+* [Babel Options](https://babeljs.io/docs/usage/options/)
