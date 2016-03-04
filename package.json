@@ -24,8 +24,12 @@
   "homepage": "https://github.com/YashdalfTheGray/react-es6-md-starter#readme",
   "dependencies": {
     "chalk": "^1.1.1",
+    "express": "^4.13.4",
+    "material-ui": "^0.15.0-alpha.1",
+    "morgan": "^1.7.0",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "react-tap-event-plugin": "^0.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.6.4",
@@ -35,7 +39,9 @@
     "browserify": "^13.0.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.0.6",
     "gulp-util": "^3.0.7",
+    "nodemon": "^1.9.1",
     "vinyl-source-stream": "^1.1.0"
   }
 }
