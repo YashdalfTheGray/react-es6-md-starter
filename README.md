@@ -1,5 +1,5 @@
 # react-es6-md-starter
-React 0.14, Babel, ES6 and Material UI starter kit
+React 15.0.1, Babel, ES6 and Material UI 0.15 beta starter kit
 
 ## Getting started
 
