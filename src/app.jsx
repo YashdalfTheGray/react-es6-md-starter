@@ -1,5 +1,10 @@
 import React from 'react';
-import AppBar from 'material-ui/lib/app-bar';
+import AppBar from 'material-ui/AppBar';
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+const lightMuiTheme = getMuiTheme(lightBaseTheme);
 
 class App extends React.Component {
     navMenuClick() {
@@ -8,10 +13,11 @@ class App extends React.Component {
 
     render() {
         return (
-            <AppBar
-                title="React Starter"
-                iconClassNameRight="muidocs-icon-navigation-expand-more"
-                onLeftIconButtonTouchTap={this.navMenuClick} />
+            <MuiThemeProvider muiTheme={lightMuiTheme}>
+                <AppBar
+                    title="React Starter"
+                    onLeftIconButtonTouchTap={this.navMenuClick} />
+            </MuiThemeProvider>
         );
     }
 }
