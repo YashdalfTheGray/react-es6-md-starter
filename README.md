@@ -1,5 +1,5 @@
 # react-es6-md-starter
-React 15.0.1, Babel, ES6 and Material UI 0.15 beta starter kit
+React 15.2.1, Babel, ES6 and Material UI 0.15.2 starter kit
 
 ## Getting started
 
@@ -9,7 +9,7 @@ Running `gulp` will print out the common tasks for the project. To get started, 
 
 `gulp serve` will start the node express server which is listening on port 8080.
 
-If not in active development, `gulp start` will build the project and start the node server. For active develpment, `gulp watch` and `gulp serve` are suggested as they rebuild the client code on changes to the `*.jsx` and the server code on changes to `server/server.js`.
+If not in active development, `gulp start` (or `npm start`) will build the project and start the node server. For active development, `gulp watch` and `gulp serve` are suggested as they rebuild the client code on changes to the `*.jsx` and the server code on changes to `server/server.js`.
 
 ## Cleaning
 
