@@ -4,7 +4,8 @@
   "description": "starter kit with react, es2015 support, material-ui and babel",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp start"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,12 @@
   },
   "homepage": "https://github.com/YashdalfTheGray/react-es6-md-starter#readme",
   "dependencies": {
-    "chalk": "^1.1.1",
-    "express": "^4.13.4",
-    "material-ui": "^0.15.0-beta.1",
+    "chalk": "^1.1.3",
+    "express": "^4.14.0",
+    "material-ui": "^0.15.2",
     "morgan": "^1.7.0",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
     "react-tap-event-plugin": "^1.0.0"
   },
   "devDependencies": {
